@@ -1,7 +1,11 @@
 import './App.css'
 import  Navbar from './components/NavBar/TopBar'
 import Sidebar from './components/NavBar/sideBar'
-import VideoGrid from './components/videos'
+import { Route, Routes } from 'react-router-dom'
+import { Home } from './pages/home/home'
+import {Video } from './pages/video/video'
+
+// import VideoGrid from './components/videos'
 function App() {
 
   return (
@@ -10,8 +14,13 @@ function App() {
       <Navbar/>
       <div className='flex'>
         <Sidebar isOpen={true} />
-        <VideoGrid />
+        {/* <VideoGrid /> */}
       </div>
+        {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/videos/:categoryId/:videoId" element={<Video />} />
+        </Routes> */}
+      
    </>
   )
 }
