@@ -6,7 +6,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <nav className=" top-0 left-0 right-0 bg-white z-50 border-b">
+    <nav className=" fixed  w-screen h-fit top-0 left-0 right-0 bg-white z-50 border-b">
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center gap-4">
           <button className="p-2 hover:bg-gray-100 rounded-full">

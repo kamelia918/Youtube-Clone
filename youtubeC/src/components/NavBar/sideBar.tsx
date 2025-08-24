@@ -24,7 +24,7 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen }: SidebarProps) {
   return (
-    <aside className={` left-0 top-14 w-64 h-screen bg-white border-r overflow-y-auto transition-transform duration-300 md:translate-x-0 ${
+    <aside className={`fixed left-0 top-14 w-60 h-screen bg-white border-r overflow-y-auto transition-transform duration-300 md:translate-x-0 ${
       isOpen ? 'translate-x-0' : '-translate-x-full'
     } hidden md:block`}>
       <div className="py-2">
