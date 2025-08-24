@@ -12,14 +12,14 @@ function App() {
     <>
       
       <Navbar/>
-      <div className='flex'>
+      {/* <div className='flex'>
         <Sidebar isOpen={true} />
-        {/* <VideoGrid /> */}
-      </div>
-        {/* <Routes>
+        {/* <VideoGrid /> 
+      </div> */}
+         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/videos/:categoryId/:videoId" element={<Video />} />
-        </Routes> */}
+        </Routes> 
       
    </>
   )

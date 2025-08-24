@@ -1,11 +1,12 @@
-import React from 'react';
 
-interface IHome {
-  
-}
 
-export function Home(props: IHome) {
+
+
+export function Home() {
+  console.log("Home rendered ✅");
   return (
-    <div>Home</div>
+    <div>
+      <h1>Home</h1>
+    </div>
   );
 }
