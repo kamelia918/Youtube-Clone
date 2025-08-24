@@ -2,14 +2,21 @@ import { useState } from 'react';
 import { Search, Menu, Bell, User } from 'lucide-react';
 import { FaYoutube } from "react-icons/fa";
 
-export default function Navbar() {
+interface ITopBar {
+  onToggle: () => void;
+}
+
+
+export default function Navbar(
+  { onToggle }: ITopBar
+) {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <nav className=" fixed  w-screen h-fit top-0 left-0 right-0 bg-white z-50 border-b">
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center gap-4">
-          <button className="p-2 hover:bg-gray-100 rounded-full">
+          <button onClick={onToggle} className="p-2 hover:bg-gray-100 rounded-full">
             <Menu size={24} />
           </button>
           <div className="flex items-center gap-1">

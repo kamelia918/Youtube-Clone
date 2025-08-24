@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Navbar from "./components/NavBar/TopBar";
 import Sidebar from "./components/NavBar/sideBar";
 import { Route, Routes } from "react-router-dom";
@@ -7,11 +8,16 @@ import { Video } from "./pages/video/video";
 
 // import VideoGrid from './components/videos'
 function App() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleNavbar = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <>
-      <Navbar />
+      <Navbar onToggle={toggleNavbar} />
       <div className="flex">
-        <Sidebar isOpen={true} />
+        <Sidebar isOpen={isOpen} />
 
         <Routes>
           <Route path="/" element={<Home />} />

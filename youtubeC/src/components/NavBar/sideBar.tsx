@@ -23,10 +23,10 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen }: SidebarProps) {
+  console.log("isOpen:", isOpen);
+  
   return (
-    <aside className={`fixed left-0 top-14 w-60 h-screen bg-white border-r overflow-y-auto transition-transform duration-300 md:translate-x-0 ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    } hidden md:block`}>
+    <aside className={` ${isOpen ? "block" : "hidden"} fixed left-0 top-14 w-60 h-screen bg-white border-r overflow-y-auto transition-transform duration-300 md:translate-x-0`}>
       <div className="py-2">
         {menuItems.map((item, index) => (
           <button
